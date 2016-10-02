@@ -5,19 +5,19 @@
 
     <ImageView
         android:layout_alignParentTop="true"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="105dp"
         android:layout_width="100dp"
         android:layout_centerHorizontal="true"
         android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/welcome_icon" />
 
     <TextView
-        android:textColor="#E6E6E6"
+        android:textColor="#c39de3"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:textSize="15sp"
-        android:text="测试文本  欢迎你来"
+        android:text="@string/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
