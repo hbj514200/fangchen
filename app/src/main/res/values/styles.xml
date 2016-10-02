@@ -35,4 +35,9 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="jiejueTheme" parent="nullAnimation">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

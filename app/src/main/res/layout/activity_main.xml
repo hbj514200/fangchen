@@ -1,50 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:scrollbars="none"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FEFEFF"
     android:orientation="vertical">
 
-    <ImageView
-        android:src="@drawable/kapian11"
-        android:adjustViewBounds="true"
-        android:layout_width="match_parent"
+    <TextView
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:text="@string/main_xunze"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="13dp"
+        android:textColor="#1d95fe"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <ImageView
-        android:src="@drawable/kapian12"
-        android:adjustViewBounds="true"
+    <ListView
+        android:id="@+id/main_listview"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:src="@drawable/kapian13"
-        android:adjustViewBounds="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:src="@drawable/kapian12"
-        android:adjustViewBounds="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:src="@drawable/kapian12"
-        android:adjustViewBounds="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:src="@drawable/kapian12"
-        android:adjustViewBounds="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
-
-</ScrollView>

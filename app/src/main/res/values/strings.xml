@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">解方程</string>
     <string name="welcome_text">弹指之间   飞速求解</string>
+    <string name="main_xunze">选 择 列 表</string>
 </resources>
