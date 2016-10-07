@@ -47,26 +47,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        position++;
-        switch (position){
-            case 1 :
-                startActivity( new Intent(MainActivity.this, kapian11Activity.class) );
-                break;
-            case 2 :
-                startActivity( new Intent(MainActivity.this, kapian12Activity.class) );
-                break;
-            case 3 :
-                startActivity( new Intent(MainActivity.this, kapian13Activity.class) );
-                break;
-            case 4 :
-                startActivity( new Intent(MainActivity.this, kapian21Activity.class) );
-                break;
-            case 5 :
-                startActivity( new Intent(MainActivity.this, kapian31Activity.class) );
-                break;
-            default:
-                break;
-        }
+        Intent intent = new Intent(MainActivity.this, jiejueActivity.class);
+        intent.putExtra("leixin", ++position);
+        startActivity(intent);
     }
 
 
