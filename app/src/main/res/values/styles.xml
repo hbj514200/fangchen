@@ -36,8 +36,10 @@
     </style>
 
     <style name="jiejueTheme" parent="nullAnimation">
-        <item name="android:windowBackground">@null</item>
+        <item name="android:windowBackground">@color/bai</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="colorControlNormal">#3F51b5</item>        <!-- AppCompatEditText默认状态状态设置底线颜色 -->
+        <item name="colorControlActivated">#c6174e</item>     <!-- AppCompatEditText选择的底线颜色 -->
     </style>
 
 </resources>

@@ -15,21 +15,17 @@ public class jiejueActivity extends Activity {
         setContentView(R.layout.activity_jiejue);
 
         suipian();
-
     }
 
     private void suipian(){
         int leixin = getIntent().getIntExtra("leixin", 1);
         FragmentManager fm = getFragmentManager();
-        if(jiejueFragment == null){
             if (leixin == 1)    jiejueFragment = new Fragment11();
             if (leixin == 2)    jiejueFragment = new Fragment12();
             if (leixin == 3)    jiejueFragment = new Fragment13();
             if (leixin == 4)    jiejueFragment = new Fragment21();
             if (leixin == 5)    jiejueFragment = new Fragment31();
-        }
-        fm.beginTransaction().add(R.id.jiejue_container, jiejueFragment).commit();
+        fm.beginTransaction().replace(R.id.jiejue_container, jiejueFragment).commit();
     }
-
 
 }
