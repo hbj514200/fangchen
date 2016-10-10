@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/jiejue21">
 
     <TextView
+        android:id="@+id/fragment_tou"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_gravity="left"
@@ -15,4 +16,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/fragment_lizi"
+        android:layout_below="@id/fragment_tou"
+        android:paddingLeft="40dp"
+        android:layout_margin="10dp"
+        android:alpha="0.9"
+        android:layout_marginLeft="16dp"
+        android:text="ax + by + c =0\ndx + ey + f =0"
+        android:textColor="#646464"
+        android:textSize="19sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <GridView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fragment_lizi"
+        android:id="@+id/gridview"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/jisuan_button"
+        android:layout_width="60dp"
+        android:background="@drawable/yunsuan_button"
+        android:layout_height="60dp" />
+
+</RelativeLayout>

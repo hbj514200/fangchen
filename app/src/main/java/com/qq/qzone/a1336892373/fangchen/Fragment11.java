@@ -47,8 +47,7 @@ public class Fragment11 extends Fragment {
                 for (int i=1; i<=2; i++)
                     if (shuju[i]==514200)   flag = 1;
                 if (flag == 0){
-                    double[] tem = shuju;
-                    xianshi.xianshi(1, tem );
+                    xianshi.xianshi(1, jisuan11.jisuan(shuju) );
                 } else
                     Toast.makeText(getActivity(), "请输入全部数据", Toast.LENGTH_SHORT).show();
             }
