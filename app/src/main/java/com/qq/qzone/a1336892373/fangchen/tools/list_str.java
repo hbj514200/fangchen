@@ -1,7 +1,6 @@
 package com.qq.qzone.a1336892373.fangchen.tools;
 
 import com.qq.qzone.a1336892373.fangchen.R;
-
 import java.util.ArrayList;
 import java.util.List;
 

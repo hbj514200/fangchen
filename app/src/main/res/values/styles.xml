@@ -31,7 +31,7 @@
 
     <style name="mainTheme" parent="nullAnimation">
         <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
-        <item name="android:windowBackground">@null</item>
+        <item name="android:windowBackground">@color/bai</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 

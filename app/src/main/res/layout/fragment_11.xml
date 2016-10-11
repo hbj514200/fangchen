@@ -32,7 +32,7 @@
     <GridView
         android:layout_centerHorizontal="true"
         android:layout_below="@id/fragment_lizi"
-        android:id="@+id/gridview11"
+        android:id="@+id/gridview"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
         android:listSelector="@android:color/transparent"

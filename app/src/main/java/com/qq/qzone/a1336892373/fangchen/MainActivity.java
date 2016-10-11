@@ -16,16 +16,22 @@ import java.util.List;
 
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
 
-    private ListView listView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = (ListView) findViewById(R.id.main_listview);
+        ListView  listView = (ListView) findViewById(R.id.main_listview);
         listView.setAdapter( new myadapter(MainActivity.this, R.layout.list_item, list_str.getStr()) );
         listView.setOnItemClickListener(this);
+
+        ImageView  imageView = (ImageView) findViewById(R.id.main_guanyu);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity( new Intent(MainActivity.this, guanyuActivity.class) );
+            }
+        });
     }
 
     public class myadapter extends ArrayAdapter<Integer> {
@@ -36,12 +42,10 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         }
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view;
-            if (convertView == null)    view = LayoutInflater.from(getContext()).inflate(resouId, null);
-            else                        view = convertView;
-            ImageView imageView = (ImageView) view.findViewById(R.id.item_imageview);
+            if (convertView == null)    convertView = LayoutInflater.from(getContext()).inflate(resouId, null);
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.item_imageview);
             imageView.setImageResource(getItem(position));
-            return view;
+            return convertView;
         }
     }
 
@@ -51,6 +55,5 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         intent.putExtra("leixin", ++position);
         startActivity(intent);
     }
-
 
 }

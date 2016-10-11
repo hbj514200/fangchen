@@ -22,27 +22,55 @@ public class jisuan13 {
         answer[1] = x1;
         answer[2] = x2;
         answer[3] = x3;
+        Log.i("测试区：x1,x2,x3", x1+" "+x2+" "+x3);
         return answer;
         }
 
-    private void findFS(double m, double n, double t, double s) {
-        double a=n/m;
-        double b=t/m;
-        double c=s/m;
-        double q=(a*a-3*b)/9;
-        double r=(2*a*a*a-9*a*b+27*c)/54;
-        if(r*r<q*q*q) {
-            //三个解
-            t=Math.acos(r/Math.sqrt(q*q*q));
-            x1=-2*Math.sqrt(q)*Math.cos(t/3)-a/3;
-            x2=-2*Math.sqrt(q)*Math.cos((t+2*Math.PI)/3)-a/3;
-            x3=-2*Math.sqrt(q)*Math.cos((t-2*Math.PI)/3)-a/3;
+    public void findFS(double a, double b, double c, double d) {
+        double A = b*b-3*a*c;
+        double B = b*c-9*a*d;
+        double C = c*c-3*b*d;
+        double deta = B*B-4*A*C;
+        Log.i("deta: ", ""+deta);
+
+        if(A==0&&B==0){
+            //盛金公式1
+            x1 = (-b)/(3*a);
+        }
+
+        if(deta>0){
+            //盛金公式2
+            double Y1 = A*b + 3*a*( (-B + Math.sqrt(deta))/2 );
+            double Y2 = A*b + 3*a*( (-B - Math.sqrt(deta))/2 );
+            x1 = ( -b - lifang(Y1) - lifang(Y2)) / (3*a);
+        }
+
+        if(deta==0 && A!=0){
+            //盛金公式3
+            double K = B/A;
+            x1 = (-b)/a + K;
+            x2 = (-K)/2;
+            x3 = (-K)/2;
+        }
+
+        if(deta<0 && A>0){
+            double T = ( 2*A*b - 3*a*B )/( 2*Math.sqrt(A*A*A) );
+            double xita=  Math.acos(T);
+
+            x1 = ( -b - 2*Math.sqrt(A)*Math.cos(xita/3) ) / ( 3*a );
+            x2 = ( -b + Math.sqrt(A)*(Math.cos(xita/3)+Math.sqrt(3)*Math.sin(xita/3)) ) / (3*a);
+            x3 = ( -b + Math.sqrt(A)*(Math.cos(xita/3)-Math.sqrt(3)*Math.sin(xita/3)) ) / (3*a);
+        }
+
+    }
+
+    private double lifang(double n){
+        //用于数字的开三次方，有效处理负数
+        if (n>0){
+            return Math.pow(n, 1.0/3.0);
         } else {
-            //一个解
-            int sgn=(r>=0)?1:-1;
-            double u=-sgn*Math.pow((Math.abs(r)+Math.sqrt(r*r-q*q*q)),1./3);
-            double v=(u!=0)?q/u:0;
-            x1=u+v-a/3;
+            return -Math.pow(-n, 1.0/3.0);
+
         }
     }
 
