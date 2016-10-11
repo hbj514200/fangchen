@@ -84,7 +84,7 @@ public class Fragment11 extends Fragment {
                 @Override public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
                 @Override
                 public void afterTextChanged(Editable editable) {
-                    if (!editText.getText().toString().equals(""))
+                    if (!editText.getText().toString().equals("")&&!editText.getText().toString().equals("-"))
                         shuju[position+1] = Double.parseDouble(editText.getText().toString());
                     else
                         shuju[position+1] = 514200;

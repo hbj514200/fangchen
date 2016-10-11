@@ -2,7 +2,6 @@ package com.qq.qzone.a1336892373.fangchen;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,7 @@ public class xianshiFragemnt extends Fragment {
         if (leixin == 2)    chuli12();
         if (leixin == 3)    chuli13();
         if (leixin == 4)    chuli21();
-        //if (leixin == 5)    chuli31();
+        if (leixin == 5)    chuli31();
     }
 
     private void chuli11(){
@@ -111,7 +110,7 @@ public class xianshiFragemnt extends Fragment {
     private void chuli21(){
         int fenzi, fenmu;
 
-        textView.setText("计算结果是：\n");   Log.i("fenzi fenmu", ""+shuju[1]+"  "+shuju[2]);
+        textView.setText("计算结果是：\n");
 
         if ( shuju[0] == jisuan12.WUJIE){
             textView.setText(textView.getText().toString() + "两条直线\n平行 或 相等\n");
@@ -129,6 +128,35 @@ public class xianshiFragemnt extends Fragment {
         if (shuju[2]<0)     textView.setText(textView.getText().toString()+"-");
         fenzi = fenshu.getFenshu(shuju[2])[1];  fenmu = fenshu.getFenshu(shuju[2])[2];
         textView.setText(textView.getText().toString()+ fenzi+"/"+fenmu +"\n");
+    }
+
+    private void chuli31(){
+        int fenzi, fenmu;
+
+        textView.setText("计算结果是：\n");
+
+        if ( shuju[0] == jisuan31.WUJIE){
+            textView.setText(textView.getText().toString() + "方程组没有唯一解\n");
+            return;
+        }
+
+            textView.setText(textView.getText().toString()+"x = "+shuju[1]+"\n");
+            textView.setText(textView.getText().toString()+"分数表示： ");
+            if (shuju[1]<0)     textView.setText(textView.getText().toString()+"-");
+            fenzi = fenshu.getFenshu(shuju[1])[1];  fenmu = fenshu.getFenshu(shuju[1])[2];
+            textView.setText(textView.getText().toString()+ fenzi+"/"+fenmu +"\n");
+
+            textView.setText(textView.getText().toString()+"y = "+shuju[2]+"\n");
+            textView.setText(textView.getText().toString()+"分数表示： ");
+            if (shuju[2]<0)     textView.setText(textView.getText().toString()+"-");
+            fenzi = fenshu.getFenshu(shuju[2])[1];  fenmu = fenshu.getFenshu(shuju[2])[2];
+            textView.setText(textView.getText().toString()+ fenzi+"/"+fenmu +"\n");
+
+            textView.setText(textView.getText().toString()+"z = "+shuju[3]+"\n");
+            textView.setText(textView.getText().toString()+"分数表示： ");
+            if (shuju[3]<0)     textView.setText(textView.getText().toString()+"-");
+            fenzi = fenshu.getFenshu(shuju[3])[1];  fenmu = fenshu.getFenshu(shuju[3])[2];
+            textView.setText(textView.getText().toString()+ fenzi+"/"+fenmu +"\n");
     }
 
 }
