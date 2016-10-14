@@ -46,7 +46,7 @@ public class Fragment11 extends Fragment {
                 if (flag == 0){
                     xianshi.xianshi(1, jisuan11.jisuan(shuju) );
                 } else
-                    Toast.makeText(getActivity(), "请输入全部数据", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getResources().getString(R.string.qinshuru), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -73,7 +73,6 @@ public class Fragment11 extends Fragment {
             convertView = getActivity().getLayoutInflater().inflate(R.layout.grid_item, null);
             TextView textView = (TextView) convertView.findViewById(R.id.grid_text);
             textView.setText(st[position+1]);
-
             final EditText editText = (EditText) convertView.findViewById(R.id.grid_edit);
             editText.addTextChangedListener(new TextWatcher() {
                 @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }

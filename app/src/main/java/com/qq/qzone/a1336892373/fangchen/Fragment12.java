@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -48,7 +49,7 @@ public class Fragment12 extends Fragment {
                 if (flag == 0){
                     xianshi.xianshi(2, jisuan12.jisuan(shuju) );
                 } else
-                    Toast.makeText(getActivity(), "请输入全部数据", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getResources().getString(R.string.qinshuru), Toast.LENGTH_SHORT).show();
             }
         });
 

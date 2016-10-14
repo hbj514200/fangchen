@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "180266902100",
+    "firebase_url": "https://fangchen-4ba67.firebaseio.com",
+    "project_id": "fangchen-4ba67",
+    "storage_bucket": "fangchen-4ba67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180266902100:android:a46dcb39a8abd79c",
+        "android_client_info": {
+          "package_name": "com.qq.qzone.a1336892373.fangchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180266902100-jsb3n861k7697pphsidhncs88nigen18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_UdZBdk5gxpvBRO3DTwjbx6CePEtiTCA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

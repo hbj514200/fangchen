@@ -11,15 +11,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.qq.qzone.a1336892373.fangchen.tools.list_str;
 import java.util.List;
 
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         ListView  listView = (ListView) findViewById(R.id.main_listview);
         listView.setAdapter( new myadapter(MainActivity.this, R.layout.list_item, list_str.getStr()) );

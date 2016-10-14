@@ -12,6 +12,7 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:inputType="numberSigned"
         android:id="@+id/grid_edit"
         android:maxLength="6"
         android:digits="1234567890-"

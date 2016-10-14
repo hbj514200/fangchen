@@ -22,7 +22,7 @@ public class xianshiFragemnt extends Fragment {
     }
 
     private void wujie(){
-        textView.setText(textView.getText().toString() + "无解\n");
+        textView.append("无解\n");
     }
 
 

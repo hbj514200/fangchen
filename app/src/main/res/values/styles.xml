@@ -42,4 +42,10 @@
         <item name="colorControlActivated">#c6174e</item>     <!-- AppCompatEditText选择的底线颜色 -->
     </style>
 
+    <style name="guanyuTheme" parent="mainTheme">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>
