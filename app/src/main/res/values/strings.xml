@@ -9,4 +9,13 @@
     <string name="name21">二元一次方程</string>
     <string name="name31">三元一次方程</string>
     <string name="qinshuru">请输入全部数据</string>
+
+    <string name="wujie">无解</string>
+    <string name="jisuanjieguo">计算结果是:</string>
+    <string name="x_shi">x =&#160;</string>
+    <string name="fenshu">分数表示:&#160;&#160;</string>
+    <string name="wuweiyijie">方程组没有唯一解</string>
+    <string name="pinxin">两条直线&#x000D;平行 或 相等</string>
+    <string name="shishujieguo">所有实数结果是&#160;</string>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.qq.qzone.a1336892373.fangchen;
 
 import com.qq.qzone.a1336892373.fangchen.tools.jisuan11;
+import com.qq.qzone.a1336892373.fangchen.tools.keyborad;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
@@ -34,10 +35,11 @@ public class Fragment11 extends Fragment {
         ListAdapter adapter = new Myadapter(getActivity(), getData(), R.layout.grid_item, new String[]{"name","edit"}, new int[]{R.id.grid_text, R.id.grid_edit});
         gridView.setAdapter(adapter);
 
-        Button button = (Button) view.findViewById(R.id.jisuan_button);
+        final Button button = (Button) view.findViewById(R.id.jisuan_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                keyborad.close(button);
                 FragmentManager fm  = getActivity().getFragmentManager();
                 xianshiFragemnt xianshi = (xianshiFragemnt) fm.findFragmentById(R.id.jiejue_xianshi);
                 int flag = 0;
