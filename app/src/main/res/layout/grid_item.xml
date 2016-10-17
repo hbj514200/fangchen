@@ -15,7 +15,7 @@
         android:inputType="numberSigned"
         android:id="@+id/grid_edit"
         android:maxLength="6"
-        android:digits="1234567890-"
+        android:digits="1234567890-."
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content" />

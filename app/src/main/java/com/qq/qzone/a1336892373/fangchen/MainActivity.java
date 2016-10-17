@@ -61,4 +61,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         startActivity(intent);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sendBroadcast( new Intent("com.qq.qzone.a1336892373.fangchen.ads") );
+    }
 }

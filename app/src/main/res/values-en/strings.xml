@@ -1,0 +1,22 @@
+
+<resources>
+    <string name="app_name">Solve equation</string>
+    <string name="welcome_text">Fast solution equation</string>
+    <string name="main_xunze">Select the list</string>
+
+    <string name="name11">Equation of one dollar and one time</string>
+    <string name="name12">A dollar square distance</string>
+    <string name="name13">Quadratic and cubic equation</string>
+    <string name="name21">Linear equation in two unknowns</string>
+    <string name="name31">Three-variable linear equation</string>
+    <string name="qinshuru">Please enter all data</string>
+
+    <string name="wujie">No solution</string>
+    <string name="jisuanjieguo">The results are:</string>
+    <string name="x_shi">x =&#160;</string>
+    <string name="fenshu">Approximate Score:&#160;&#160;</string>
+    <string name="wuweiyijie">The equation has no unique solution</string>
+    <string name="pinxin">Two line&#x000D;are parallel or equal</string>
+    <string name="shishujieguo">All real numbers result in&#160;</string>
+
+</resources>

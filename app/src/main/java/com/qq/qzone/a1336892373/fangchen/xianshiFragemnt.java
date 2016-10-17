@@ -26,6 +26,7 @@ public class xianshiFragemnt extends Fragment {
         View view = inflater.inflate(R.layout.fragment_xianshi, container, false);
         textView = (TextView) view.findViewById(R.id.jiejue_text);
         string_init();
+
         return view;
     }
 
@@ -45,6 +46,7 @@ public class xianshiFragemnt extends Fragment {
 
 
     public void xianshi(int leixin, double[] shuju){
+        textView.setVisibility(View.VISIBLE);
         textView.setText("");
         this.shuju = shuju;
         if (leixin == 1)    chuli11();
@@ -74,7 +76,7 @@ public class xianshiFragemnt extends Fragment {
     private void chuli12(){
         int fenzi, fenmu;
 
-        textView.setText(jisuanjieguo+"\n");
+        textView.setText(jisuanjieguo+"\n\n");
 
         if ( shuju[0] == jisuan12.WUJIE){
             wujie();
@@ -85,7 +87,7 @@ public class xianshiFragemnt extends Fragment {
         textView.append(fenshubiaoshi);
         if (shuju[1]<0)     textView.append("-");
         fenzi = fenshu.getFenshu(shuju[1])[1];  fenmu = fenshu.getFenshu(shuju[1])[2];
-        textView.append(fenzi+"/"+fenmu +"\n");
+        textView.append(fenzi+"/"+fenmu +"\n\n");
 
         textView.append("x2 = "+shuju[2]+"\n");
         textView.append(fenshubiaoshi);
@@ -104,16 +106,16 @@ public class xianshiFragemnt extends Fragment {
             textView.append(fenshubiaoshi);
             if (shuju[1]<0)     textView.append("-");
             fenzi = fenshu.getFenshu(shuju[1])[1];  fenmu = fenshu.getFenshu(shuju[1])[2];
-            textView.append(fenzi+"/"+fenmu +"\n");
-        } else          textView.append("x1"+wujie+"\n");
+            textView.append(fenzi+"/"+fenmu +"\n\n");
+        } else          textView.append("x1"+wujie+"\n\n");
 
         if (shuju[2]!=jisuan13.WUJIE){
             textView.append("x2 = "+shuju[2]+"\n");
             textView.append(fenshubiaoshi);
             if (shuju[2]<0)     textView.setText("-");
             fenzi = fenshu.getFenshu(shuju[2])[1];  fenmu = fenshu.getFenshu(shuju[2])[2];
-            textView.append(fenzi+"/"+fenmu +"\n");
-        } else          textView.append("x2"+wujie+"\n");
+            textView.append(fenzi+"/"+fenmu +"\n\n");
+        } else          textView.append("x2"+wujie+"\n\n");
 
         if (shuju[3]!=jisuan13.WUJIE){
             textView.append("x3 = "+shuju[3]+"\n");
@@ -128,33 +130,10 @@ public class xianshiFragemnt extends Fragment {
     private void chuli21(){
         int fenzi, fenmu;
 
-        textView.setText(jisuanjieguo+"\n");
-
-        if ( shuju[0] == jisuan12.WUJIE){
-            textView.append(pinxin);
-            return;
-        }
-
-        textView.append("x = "+shuju[1]+"\n");
-        textView.append(fenshubiaoshi);
-        if (shuju[1]<0)     textView.setText("-");
-        fenzi = fenshu.getFenshu(shuju[1])[1];  fenmu = fenshu.getFenshu(shuju[1])[2];
-        textView.append(textView.getText().toString()+ fenzi+"/"+fenmu +"\n");
-
-        textView.append(textView.getText().toString()+"y = "+shuju[2]+"\n");
-        textView.setText(fenshubiaoshi);
-        if (shuju[2]<0)     textView.setText("-");
-        fenzi = fenshu.getFenshu(shuju[2])[1];  fenmu = fenshu.getFenshu(shuju[2])[2];
-        textView.append(fenzi+"/"+fenmu +"\n");
-    }
-
-    private void chuli31(){
-        int fenzi, fenmu;
-
-        textView.setText(jisuanjieguo+"\n");
+        textView.setText(jisuanjieguo+"\n\n");
 
         if ( shuju[0] == jisuan31.WUJIE){
-            textView.append( wuweiyijie+"\n");
+            textView.append( pinxin+"\n\n");
             return;
         }
 
@@ -162,19 +141,42 @@ public class xianshiFragemnt extends Fragment {
         textView.append(fenshubiaoshi);
         if (shuju[1]<0)     textView.append("-");
         fenzi = fenshu.getFenshu(shuju[1])[1];  fenmu = fenshu.getFenshu(shuju[1])[2];
-        textView.append( fenzi+"/"+fenmu +"\n");
+        textView.append( fenzi+"/"+fenmu +"\n\n");
 
         textView.append("y = "+shuju[2]+"\n");
         textView.append(fenshubiaoshi);
         if (shuju[2]<0)     textView.append("-");
         fenzi = fenshu.getFenshu(shuju[2])[1];  fenmu = fenshu.getFenshu(shuju[2])[2];
         textView.append( fenzi+"/"+fenmu +"\n");
+    }
+
+    private void chuli31(){
+        int fenzi, fenmu;
+
+        textView.setText(jisuanjieguo+"\n\n");
+
+        if ( shuju[0] == jisuan31.WUJIE){
+            textView.append( wuweiyijie+"\n\n");
+            return;
+        }
+
+        textView.append("x = "+shuju[1]+"\n");
+        textView.append(fenshubiaoshi);
+        if (shuju[1]<0)     textView.append("-");
+        fenzi = fenshu.getFenshu(shuju[1])[1];  fenmu = fenshu.getFenshu(shuju[1])[2];
+        textView.append( fenzi+"/"+fenmu +"\n\n");
+
+        textView.append("y = "+shuju[2]+"\n");
+        textView.append(fenshubiaoshi);
+        if (shuju[2]<0)     textView.append("-");
+        fenzi = fenshu.getFenshu(shuju[2])[1];  fenmu = fenshu.getFenshu(shuju[2])[2];
+        textView.append( fenzi+"/"+fenmu +"\n\n");
 
         textView.append("z = "+shuju[3]+"\n");
         textView.append(fenshubiaoshi);
         if (shuju[3]<0)     textView.append("-");
         fenzi = fenshu.getFenshu(shuju[3])[1];  fenmu = fenshu.getFenshu(shuju[3])[2];
-        textView.append( fenzi+"/"+fenmu +"\n");
+        textView.append( fenzi+"/"+fenmu +"\n\n");
     }
 
 }

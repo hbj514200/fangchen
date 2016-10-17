@@ -1,0 +1,22 @@
+
+<resources>
+    <string name="app_name">解方程</string>
+    <string name="welcome_text">彈指之間   飛速求解</string>
+    <string name="main_xunze">選 擇 列 表</string>
+
+    <string name="name11">壹元壹次方程</string>
+    <string name="name12">壹元二次方程</string>
+    <string name="name13">壹元三次方程</string>
+    <string name="name21">二元壹次方程</string>
+    <string name="name31">三元壹次方程</string>
+    <string name="qinshuru">請輸入全部數據</string>
+
+    <string name="wujie">無解</string>
+    <string name="jisuanjieguo">計算結果是:</string>
+    <string name="x_shi">x =&#160;</string>
+    <string name="fenshu">近似分數表示:&#160;&#160;</string>
+    <string name="wuweiyijie">方程組沒有唯壹解</string>
+    <string name="pinxin">兩條直線&#x000D;平行 或 相等</string>
+    <string name="shishujieguo">所有實數結果是&#160;</string>
+
+</resources>

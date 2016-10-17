@@ -13,7 +13,7 @@
     <string name="wujie">无解</string>
     <string name="jisuanjieguo">计算结果是:</string>
     <string name="x_shi">x =&#160;</string>
-    <string name="fenshu">分数表示:&#160;&#160;</string>
+    <string name="fenshu">近似分数表示:&#160;&#160;</string>
     <string name="wuweiyijie">方程组没有唯一解</string>
     <string name="pinxin">两条直线&#x000D;平行 或 相等</string>
     <string name="shishujieguo">所有实数结果是&#160;</string>

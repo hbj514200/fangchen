@@ -14,6 +14,7 @@ public class WelcomeActivity extends Activity {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                startService( new Intent(WelcomeActivity.this, AdsService.class) );
                 try { Thread.sleep(2500); } catch (Exception e) { }
                 startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                 finish();
